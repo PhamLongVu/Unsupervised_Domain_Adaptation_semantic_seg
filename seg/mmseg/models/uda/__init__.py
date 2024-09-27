@@ -5,10 +5,8 @@
 # Licensed under the Apache License, Version 2.0
 # ---------------------------------------------------------------
 
-from mmseg.models.uda.advseg import AdvSeg
-from mmseg.models.uda.dacs import DACS
 from mmseg.models.uda.dacs_meta_pseudo_label import DACS_META_PSLBL
-from mmseg.models.uda.dacs_meta_eman import DACS_META_EMAN
+
 
 __all__ = [
 
