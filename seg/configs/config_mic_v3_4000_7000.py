@@ -4,13 +4,13 @@ log_config = dict(
     hooks=[dict(type='TextLoggerHook', by_epoch=False)])
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-load_from = '/kaggle/input/checkpoint/other/default/1/iter_2000.pth'
-resume_from = '/kaggle/input/checkpoint/other/default/1/iter_2000.pth'
+load_from = '/kaggle/input/4000/other/default/1/iter_4000.pth'
+resume_from = '/kaggle/input/4000/other/default/1/iter_4000.pth'
 workflow = [('train', 1)]
 cudnn_benchmark = True
 norm_cfg = dict(type='BN', requires_grad=True)
 find_unused_parameters = True
-checkpoint = '/kaggle/input/checkpoint/other/default/1/iter_2000.pth'
+checkpoint = '/kaggle/input/4000/other/default/1/iter_4000.pth'
 model = dict(
     type='EncoderDecoder',
     pretrained= checkpoint,
@@ -238,9 +238,9 @@ lr_config = dict(
 seed = 2
 n_gpus = 1
 gpu_model = 'NVIDIATITANRTX'
-runner = dict(type='IterBasedRunner', max_iters=4000)
-checkpoint_config = dict(by_epoch=False, interval=1000, max_keep_ckpts=1)
-evaluation = dict(interval=1000, metric='mIoU')
+runner = dict(type='IterBasedRunner', max_iters=7000)
+checkpoint_config = dict(by_epoch=False, interval=1500, max_keep_ckpts=1)
+evaluation = dict(interval=1500, metric='mIoU')
 name = '240926_0452_anyName_01621'
 exp = 'basic'
 name_dataset = 'gta2cityscapes_512x512'
