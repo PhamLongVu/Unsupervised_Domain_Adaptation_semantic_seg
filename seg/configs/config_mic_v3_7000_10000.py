@@ -4,13 +4,13 @@ log_config = dict(
     hooks=[dict(type='TextLoggerHook', by_epoch=False)])
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-load_from = '/kaggle/input/1/other/default/12/iter_7000.pth'
-resume_from = '/kaggle/input/1/other/default/12/iter_7000.pth'
+load_from = '/kaggle/input/12/other/default/1/iter_7000.pth'
+resume_from = '/kaggle/input/12/other/default/1/iter_7000.pth'
 workflow = [('train', 1)]
 cudnn_benchmark = True
 norm_cfg = dict(type='BN', requires_grad=True)
 find_unused_parameters = True
-checkpoint = '/kaggle/input/1/other/default/12/iter_7000.pth'
+checkpoint = '/kaggle/input/12/other/default/1/iter_7000.pth'
 model = dict(
     type='EncoderDecoder',
     pretrained= checkpoint,
