@@ -4,13 +4,13 @@ log_config = dict(
     hooks=[dict(type='TextLoggerHook', by_epoch=False)])
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-load_from = '/kaggle/input/123/other/default/1/iter_10000.pth'
-resume_from = '/kaggle/input/123/other/default/1/iter_10000.pth'
+load_from = '/kaggle/input/1234/other/default/1/iter_15000.pth'
+resume_from = '/kaggle/input/1234/other/default/1/iter_15000.pth'
 workflow = [('train', 1)]
 cudnn_benchmark = True
 norm_cfg = dict(type='BN', requires_grad=True)
 find_unused_parameters = True
-checkpoint = '/kaggle/input/123/other/default/1/iter_10000.pth'
+checkpoint = '/kaggle/input/1234/other/default/1/iter_15000.pth'
 model = dict(
     type='EncoderDecoder',
     pretrained= checkpoint,
@@ -238,7 +238,7 @@ lr_config = dict(
 seed = 2
 n_gpus = 1
 gpu_model = 'NVIDIATITANRTX'
-runner = dict(type='IterBasedRunner', max_iters=15000)
+runner = dict(type='IterBasedRunner', max_iters=20000)
 checkpoint_config = dict(by_epoch=False, interval=1500, max_keep_ckpts=1)
 evaluation = dict(interval=1500, metric='mIoU')
 name = '240926_0452_anyName_01621'
